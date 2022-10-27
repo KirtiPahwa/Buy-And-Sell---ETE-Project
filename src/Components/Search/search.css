@@ -1,0 +1,144 @@
+.search {
+  position: relative;
+}
+.searchInputs {
+  height: 48px;
+  display: flex;
+}
+:root {
+  --blue: #098bbf;
+  --green: #7ba734;
+}
+
+.search input {
+  /* background-color: #ebeeef;
+    color: black;
+    border: 0;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 60px;
+    width: 250px;
+    display: flex; */
+
+  width: 30em;
+  height: 40px;
+  border: 2px solid #098bbf;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  color: #098bbf;
+}
+
+.search .searchIcon {
+  margin: 0px;
+  height: 2.5em;
+  width: 48px;
+  background-color: #098bbf;
+  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #098bbf;
+}
+.sear input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+.search_location {
+  margin: 10px -40px;
+}
+.search_location input {
+  height: 40px;
+  width: 200px;
+  border: 1px solid var(--blue);
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: var(--green);
+  font-size: large;
+  font-weight: 400;
+}
+.search_location input:focus {
+  outline: 1px solid var(--blue);
+}
+.search_icon {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  padding: 2px;
+  position: relative;
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  top: -3.5px;
+  background-color: #098bbf;
+}
+.search_icon:hover {
+  cursor: pointer;
+}
+.search_product {
+  margin: 0px -80px;
+}
+.search_product input {
+  height: 40px;
+  width: 500px;
+  margin-top: 0px;
+  border: 1px solid var(--blue);
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: var(--green);
+  font-size: large;
+  font-weight: 400;
+}
+.search_product input:focus {
+  outline: 1px solid var(--blue);
+}
+.dataResult {
+  position: absolute;
+  top: 4em;
+  width: 30em;
+  height: 200px;
+  background-color: white;
+  box-shadow: #00000059 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.dataItem {
+  border-bottom: 1.5px solid rgb(197, 194, 194);
+  padding: 5px 4px;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+
+.dataResult :hover {
+  background-color: #ebeeef;
+}
+
+#clearBtn {
+  cursor: pointer;
+  /* position: absolute;
+    top: 0; */
+}

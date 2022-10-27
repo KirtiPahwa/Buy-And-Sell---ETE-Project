@@ -1,0 +1,8 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Buy and Sell",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

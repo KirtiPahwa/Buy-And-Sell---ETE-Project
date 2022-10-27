@@ -1,0 +1,59 @@
+.bannerParentDiv {
+  padding-top: 5em;
+}
+:root {
+  --blue: #098bbf;
+  --green: #7ba734;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar {
+  display: flex;
+  padding: 20px 16px 10px 16px;
+  color: var(--blue);
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
+  margin-right: 16px;
+  font-weight: bolder;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+  padding: 10px;
+}
+button,
+select {
+  text-transform: none;
+  color: var(--blue);
+  border: #098bbf;
+  text-align: center;
+}
+
+.bannerChildDiv .banner {
+  position: relative;
+  width: 100vw;
+}
+.bannerChildDiv .banner img {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .otherQuickOptions {
+    display: none;
+  }
+  .bannerChildDiv .banner {
+    position: relative;
+  }
+}
+
+.otherQuickOptions span {
+  cursor: pointer;
+  transition: 20ms;
+  margin-top: -10px;
+}
+.otherQuickOptions span:hover {
+  text-decoration: underline;
+}
+.otherQuickOptions {
+  margin-left: 30px;
+  display: flex;
+}

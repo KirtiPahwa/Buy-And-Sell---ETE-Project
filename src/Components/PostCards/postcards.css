@@ -1,0 +1,57 @@
+.card {
+  margin-right: 15px;
+  padding: 13px;
+  max-width: 222px;
+  width: 222px;
+  height: 270px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.05),
+    2px 10px 10px 0px rgba(0, 0, 0, 0.19);
+}
+:root {
+  --blue: #098bbf;
+  --green: #7ba734;
+}
+.card .favorite {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .image img {
+  height: 100px;
+  max-width: 120%;
+  max-height: 120%;
+  min-height: 100%;
+  text-align: center;
+}
+.card .content .rate {
+  margin-top: 10px;
+  font-size: larger;
+  font-weight: bold;
+  color: #098bbf;
+}
+.card .content .category {
+  font-size: medium;
+}
+.card .content .name {
+  font-size: small;
+}
+.card .date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+  color: #098bbf;
+}
+:root {
+  --blue: #098bbf;
+  --green: #7ba734;
+}
