@@ -44,7 +44,17 @@ function Header() {
         <Search />
         <div className="loginPage">
           {user ? (
-            user.displayName
+            <span
+              style={{
+                color: "#098bbf",
+                fontSize: "20px",
+                position: "relative",
+                left: "10px",
+                textDecoration: "none",
+              }}
+            >
+              {user.displayName}
+            </span>
           ) : (
             <Link to="/login">
               <div className="login_button">
@@ -52,10 +62,19 @@ function Header() {
               </div>{" "}
             </Link>
           )}
-          <hr />
         </div>
         {user && (
-          <span onClick={logoutHandler} className="logout-span">
+          <span
+            style={{
+              position: "relative",
+              left: "-65px",
+              fontSize: "20px",
+              color: "#098bbf",
+              textDecoration: "underline",
+            }}
+            onClick={logoutHandler}
+            className="logout-span"
+          >
             Logout
           </span>
         )}

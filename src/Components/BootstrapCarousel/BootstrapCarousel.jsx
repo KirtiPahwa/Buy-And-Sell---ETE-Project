@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import slider1 from "..//../assets/slider1.jpg";
-import slider2 from "..//../assets/slider2.png";
-import slider3 from "..//../assets/slider3.jpg";
+import slider1 from "../../assets/slider1.jpg";
+import slider2 from "../../assets/slider2.png";
+import slider3 from "../../assets/slider3.jpg";
 import "./boot.css";
 
 function BootstrapCarousel() {

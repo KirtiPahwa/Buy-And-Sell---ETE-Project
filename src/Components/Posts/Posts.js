@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { BallTriangle } from "react-loader-spinner";
+import { ColorRing } from "react-loader-spinner";
 import "./Post.css";
 import { Firebase } from "../../firebase/config";
 import PostCards from "../PostCards/PostCards";
@@ -80,7 +80,7 @@ function Posts() {
               fontSize: "30px",
             }}
           >
-            Fresh recommendations
+            Today's Deal
           </span>
         </div>
         <div
@@ -88,15 +88,14 @@ function Posts() {
           className="fresh-recomendation-cards cards"
         >
           {loading2 ? (
-            <BallTriangle
-              height={100}
-              width={100}
-              radius={5}
-              color="#4fa94d"
-              ariaLabel="ball-triangle-loading"
-              wrapperClass={{}}
-              wrapperStyle=""
+            <ColorRing
               visible={true}
+              height="80"
+              width="80"
+              ariaLabel="blocks-loading"
+              wrapperStyle={{}}
+              wrapperClass="blocks-wrapper"
+              colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
             />
           ) : (
             freshRecomendationCards
@@ -124,15 +123,20 @@ function Posts() {
             {" "}
             {loading ? (
               <div style={{ marginLeft: "46%" }}>
-                <BallTriangle
-                  height={100}
-                  width={100}
-                  radius={5}
-                  color="#4fa94d"
-                  ariaLabel="ball-triangle-loading"
-                  wrapperClass={{}}
-                  wrapperStyle=""
+                <ColorRing
                   visible={true}
+                  height="80"
+                  width="80"
+                  ariaLabel="blocks-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="blocks-wrapper"
+                  colors={[
+                    "#e15b64",
+                    "#f47e60",
+                    "#f8b26a",
+                    "#abbd81",
+                    "#849b87",
+                  ]}
                 />
               </div>
             ) : (

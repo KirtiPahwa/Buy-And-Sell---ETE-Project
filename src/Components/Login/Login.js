@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { Firebase } from "../../firebase/config";
 import Logo from "../../assets/logo.png";
-import { BallTriangle } from "react-loader-spinner";
+import { ColorRing } from "react-loader-spinner";
 
 import "./Login.css";
 
@@ -32,15 +32,14 @@ function Login() {
       {loading && (
         <div style={{ left: "50%", top: "15%", position: "absolute" }}>
           {" "}
-          <BallTriangle
-            height={100}
-            width={100}
-            radius={5}
-            color="#4fa94d"
-            ariaLabel="ball-triangle-loading"
-            wrapperClass={{}}
-            wrapperStyle=""
+          <ColorRing
             visible={true}
+            height="80"
+            width="80"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
           />
         </div>
       )}

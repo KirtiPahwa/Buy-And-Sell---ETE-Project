@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import { Firebase } from "../../firebase/config";
 import { AuthContext } from "../../contextStore/AuthContext";
 import { useHistory } from "react-router";
-import GoLoading from "../Loading/GoLoading";
+import { ColorRing } from "react-loader-spinner";
 const Create = () => {
   const { user } = useContext(AuthContext);
   const history = useHistory();
@@ -13,7 +13,7 @@ const Create = () => {
   let [price, setPrice] = useState("");
   let [description, setDescription] = useState("");
   let [image, setImage] = useState();
-  let [loading,setLoading]=useState(false);
+  let [loading, setLoading] = useState(false);
   const handleSubmit = () => {
     setLoading(true);
     let date = new Date().toDateString();
@@ -42,14 +42,24 @@ const Create = () => {
   return (
     <Fragment>
       <Header />
-    { loading && <GoLoading/> }
+      {loading && (
+        <ColorRing
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="blocks-loading"
+          wrapperStyle={{}}
+          wrapperClass="blocks-wrapper"
+          colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+        />
+      )}
       <div className="centerDiv">
-        <label>Name</label>
+        <label>Product Name</label>
         <br />
         <input
           className="input"
           type="text"
-          name="Name"
+          name="name"
           value={name}
           onChange={(e) => {
             setName(e.target.value);
@@ -62,8 +72,10 @@ const Create = () => {
           onChange={(e) => {
             setCategory(e.target.value);
           }}
-          className="input"
-        > <option >Select Category</option>
+          className="input categ"
+        >
+          {" "}
+          <option>Select Category</option>
           <option value="Cars">Cars</option>
           <option value="Cameras & Lenses">Cameras & Lenses</option>
           <option value="Computers & Laptops">Computers & Laptops</option>
@@ -95,18 +107,8 @@ const Create = () => {
             setDescription(e.target.value);
           }}
         />
-        <br />
-
-        <br />
-        <img
-          alt="Posts"
-          width="200px"
-          height="200px"
-          src={image ? URL.createObjectURL(image) : ""}
-        ></img>
-
-        <br />
         <input
+          className="fileUpload"
           type="file"
           onChange={(e) => {
             setImage(e.target.files[0]);
@@ -114,9 +116,9 @@ const Create = () => {
         />
         <br />
         <button className="uploadBtn" onClick={handleSubmit}>
-          upload and Submit
+          Post
         </button>
-      </div> 
+      </div>
     </Fragment>
   );
 };

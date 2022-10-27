@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import { AllPostContext } from "..//../contextStore/AllPostContext";
+import { AllPostContext } from "../../contextStore/AllPostContext";
 import { PostContext } from "../../contextStore/PostContext";
-import CloseIcon from "..//../assets/CloseIcon/CloseIcon";
+import CloseIcon from "../../assets/CloseIcon/CloseIcon";
 import { useHistory } from "react-router";
 import "./search.css";
-import Search_icon from "..//../assets/search-icon.png";
+import Search_icon from "../../assets/search-icon.png";
 function Search() {
   const { allPost, setAllPost } = useContext(AllPostContext);
   const { setPostContent } = useContext(PostContext);
